@@ -69,7 +69,7 @@ void propertyCatalog::removeProperty(const int index) {
 	size--;
 }
 
-void propertyCatalog::printGarages() const{
+void propertyCatalog::printGarages() const {
 	for (size_t i = 0; i < size; i++) {
 		if (list[i]->type == 0)
 			list[i]->print();
@@ -96,7 +96,7 @@ void propertyCatalog::getPropertiesFromCity(const char* city)const {
 }
 
 void propertyCatalog::getPropertiesInPriceRange(const int lowerLimit, const int upperLimit)const {
-	for (size_t i = 0; i < size; i++) 
+	for (size_t i = 0; i < size; i++)
 		list[i]->getPropertyInPriceRange(lowerLimit, upperLimit);
 }
 
@@ -116,7 +116,7 @@ void propertyCatalog::print()const {
 		list[i]->print();
 }
 
-void propertyCatalog::sortByCity(){
+void propertyCatalog::sortByCity() {
 	for (size_t i = 0; i < size; i++) {
 		for (size_t j = 0; j < size - i; i++)
 			if (strcmp(list[i]->city, list[i + 1]->city) > 0) {

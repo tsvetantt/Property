@@ -28,7 +28,7 @@ propertyForSale::propertyForSale() {
 	forRent = false;
 }
 
-propertyForSale::propertyForSale(const char* city, const char* region, const int price, const double squaring,bool rent) {
+propertyForSale::propertyForSale(const char* city, const char* region, const int price, const double squaring, bool rent) {
 	this->city = new char[strlen(city) + 1];
 	strcpy(this->city, city);
 
@@ -53,23 +53,23 @@ propertyForSale::~propertyForSale() {
 	free();
 }
 
-void propertyForSale::setForRentOrForSell(int check) {
+void propertyForSale::setForRentOrForSell(const bool check) {
 	this->forRent = check;
 }
 
-void propertyForSale::getPropertysFromCity(const char* city) {
+void propertyForSale::getPropertyFromCity(const char* city) const {
 	if (strcmp(this->city, city) == 0) {
 		print();
 	}
 }
 
-void propertyForSale::getPropertyInPriceRange(const int lowerLimit, const int upperLimit) {
+void propertyForSale::getPropertyInPriceRange(const int lowerLimit, const int upperLimit)const {
 	if (lowerLimit <= this->price && this->price <= upperLimit) {
 		print();
 	}
 }
 
-void propertyForSale::getPropertyInSquaringRange(const double lowerLimit, const double upperLimit) {
+void propertyForSale::getPropertyInSquaringRange(const double lowerLimit, const double upperLimit)const {
 	if (lowerLimit <= this->squaring && this->squaring <= upperLimit) {
 		print();
 	}

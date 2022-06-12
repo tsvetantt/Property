@@ -4,7 +4,7 @@
 class propertyForSale {
 protected:
 	enum Type {
-		GARAGE,
+		GARAGE = 0,
 		HOUSE,
 		APARTMENT,
 		UNKNOWN

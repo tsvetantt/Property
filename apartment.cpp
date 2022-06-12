@@ -9,8 +9,8 @@ Apartment::Apartment() : propertyForSale() {
 	this->floor = 0;
 }
 
-Apartment::Apartment(const char* city, const char* region, const int price, const double squaring, int amountOfRooms, int yearOfConstruction,int blockNum,int floor,bool rent)
-: propertyForSale(city,region,price,squaring,rent) {
+Apartment::Apartment(const char* city, const char* region, const int price, const double squaring, int amountOfRooms, int yearOfConstruction, int blockNum, int floor, bool rent)
+	: propertyForSale(city, region, price, squaring, rent) {
 	type = Type::APARTMENT;
 	this->amountOfRooms = amountOfRooms;
 	this->yearOfConstruction = yearOfConstruction;
@@ -30,9 +30,9 @@ int Apartment::getFloor() const {
 
 void Apartment::print()const {
 	std::cout << "Apartment:" << std::endl;
-	std::cout<<  "- City: " << this->city <<std::endl;
-	std::cout << "- Region: " << this->region <<std::endl;
-	std::cout << "- Price: " << this->price << "$" <<std::endl;
+	std::cout << "- City: " << this->city << std::endl;
+	std::cout << "- Region: " << this->region << std::endl;
+	std::cout << "- Price: " << this->price << "$" << std::endl;
 	std::cout << "- Squaring: " << this->squaring << std::endl;
 	std::cout << "- Amount of rooms: " << this->amountOfRooms << std::endl;
 	std::cout << "- Year of construction: " << this->yearOfConstruction << std::endl;

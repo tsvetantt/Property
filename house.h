@@ -16,8 +16,8 @@ public:
 
 	void print()const override;
 	propertyForSale* clone()const override;
-	
+
 
 	void getHouseInRoomsRange(const int, const int)const;
-	
+
 };

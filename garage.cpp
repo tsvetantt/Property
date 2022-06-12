@@ -1,10 +1,8 @@
 #include "garage.h"
 #include <iostream>
 
-Garage::Garage(const char*, const char*, const int, const double, const int yearOfConstruction, bool rent)
-:propertyForSale(city, region, price, squaring, rent) {
-	if (yearOfConstruction < 0)
-		throw; // ADD THE CORRECT EXCEPTION
+Garage::Garage(const char* city, const char* region, const int price, const double squaring, const int yearOfConstruction, bool rent)
+	:propertyForSale(city, region, price, squaring, rent) {
 	type = Type::GARAGE;
 	this->yearOfConstruction = yearOfConstruction;
 }
@@ -20,4 +18,8 @@ void Garage::print()const {
 
 const size_t Garage::getRooms()const {
 	return 0;
+}
+
+propertyForSale* Garage::clone()const {
+	return new Garage(*this);
 }

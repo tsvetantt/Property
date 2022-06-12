@@ -2,7 +2,7 @@
 #include "propertyForSale.h"
 
 
-class Apartment : public propertyForSale{
+class Apartment : public propertyForSale {
 private:
 	int amountOfRooms;
 	int yearOfConstruction;
@@ -10,7 +10,7 @@ private:
 	int floor;
 public:
 	Apartment();
-	Apartment(const char* city, const char* region, const int price, const double squaring, int amountOfRooms, int yearOfConstruction,int blockNum,int floor,bool rent);
+	Apartment(const char* city, const char* region, const int price, const double squaring, int amountOfRooms, int yearOfConstruction, int blockNum, int floor, bool rent);
 
 	int getYearOfConstruction() const;
 	int getBlockNum() const;

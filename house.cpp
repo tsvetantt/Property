@@ -1,15 +1,13 @@
 #include "house.h"
 #include <iostream>
 
-House::House(const char* city, const char* region, const int price, const double squaring, const bool rent, int amountOfRooms, int yearOfConstruction, int houseNumber) 
-:propertyForSale(city, region, price, squaring, rent){
-	if (amountOfRooms < 0 || yearOfConstruction < 0 || houseNumber < 0)
-		throw "Out of range!"; //Exception....
-   
+House::House(const char* city, const char* region, const int price, const double squaring, const bool rent, int amountOfRooms, int yearOfConstruction, int houseNumber)
+    :propertyForSale(city, region, price, squaring, rent) {
+
     type = Type::HOUSE;
-	this->amountOfRooms = amountOfRooms;
-	this->yearOfConstruction = yearOfConstruction;
-	this->houseNumber = houseNumber;
+    this->amountOfRooms = amountOfRooms;
+    this->yearOfConstruction = yearOfConstruction;
+    this->houseNumber = houseNumber;
 }
 
 void House::print()const {
