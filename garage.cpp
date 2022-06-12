@@ -18,6 +18,6 @@ void Garage::print()const {
 	std::cout << "-Year of construction: : " << yearOfConstruction << std::endl;
 }
 
-const size_t Garage::getRooms()const {
+const int Garage::getRooms()const {
 	return 0;
 }
