@@ -3,6 +3,12 @@
 
 class propertyForSale {
 protected:
+	enum Type {
+		GARAGE,
+		HOUSE,
+		APARTMENT,
+		UNKNOWN
+	}type;
 	char* city;
 	char* region;
 	int price;
@@ -16,20 +22,19 @@ public:
 	propertyForSale& operator=(const propertyForSale&);
 	virtual ~propertyForSale();
 
-	virtual void print() = 0;
+	virtual void print()const = 0;
 
-	void setForRentOrForSell(int);
+	void setForRentOrForSell(const bool);
 	
-	virtual propertyForSale* clone() = 0;
+	virtual propertyForSale* clone()const = 0;
 	
-	virtual int getRooms() = 0;
-	void getPropertysFromCity(const char*);
-	void getPropertyInPriceRange(const int , const int);
-	void getPropertyInSquaringRange(const double, const double);
+	virtual const size_t getRooms()const = 0;
 
-
-
-
+	void getPropertyFromCity(const char*)const;
+	void getPropertyInPriceRange(const int , const int)const;
+	void getPropertyInSquaringRange(const double, const double)const;
+	
+	friend class propertyCatalog;
 private:
 	void copy(const propertyForSale&);
 	void free();

@@ -20,14 +20,14 @@ void propertyForSale::free() {
 }
 
 
-
-
 propertyForSale::propertyForSale() {
 	this->city = nullptr;
 	this->region = nullptr;
 	this->price = 0;
 	this->squaring = 0;
+	forRent = false;
 }
+
 propertyForSale::propertyForSale(const char* city, const char* region, const int price, const double squaring,bool rent) {
 	this->city = new char[strlen(city) + 1];
 	strcpy(this->city, city);
